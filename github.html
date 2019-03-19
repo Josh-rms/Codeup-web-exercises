@@ -12,81 +12,171 @@
             color: gray;
         }
         main {
-            background-color: lightgray;
+            background-color: #ededed;
         }
         a {
             text-decoration: none;
+        }
+        .top-list {
+            color: lightgray;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 15px;
+            font-weight: 600;
+            box-sizing: border-box;
+            align-items: center;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+        .middle-list {
+            color: gray;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 13px;
+            font-weight: 500;
+            box-sizing: border-box;
+            align-items: center;
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+        .bottom-list {
+            color: blue;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 10px;
+            font-weight: 500;
+            box-sizing: border-box;
+            align-items: center;
+            padding-right: 11px;
+            padding-left: 11px;
+
+        }
+        .copyright {
+            color: Grey;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 10px;
+            font-weight: 500;
+            box-sizing: border-box;
+            align-items: center;
+            padding-right: 11px;
+            padding-left: 11px;
+        }
+        .codeup {
+            color: Black;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 25px;
+            font-weight: 400;
+            box-sizing: border-box;
+            align-items: center;
+            padding-right: 11px;
+            padding-left: 11px;
+        }
+        .codeup-dev {
+            color: black;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 18px;
+            font-weight: 400;
+            box-sizing: border-box;
+            align-items: center;
+            padding-left: 60px;
+        }
+        .avatar-body {
+            color: black;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 18px;
+            font-weight: 400;
+            box-sizing: border-box;
+            align-items: center;
+            padding-left: 40px;
+        }
+        .main-body {
+            color: black;
+            list-style: none;
+            display: flex;
+            font-family: BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U;
+            font-size: 13px;
+            font-weight: 500;
+            box-sizing: border-box;
+            align-items: center;
+            padding-right: 12px;
+            padding-left: 12px;
         }
     </style>
 </head>
 <body>
     <header>
-    <nav>
-        <img src="img/Screen%20Shot%202019-03-19%20at%2010.47.30%20AM.png" alt="Github logo" width="75" height="70">
-        <a href="" style="color: lightgray">Pull request</a>
-        <a href="" style="color: lightgray">Issues</a>
-        <a href="" style="color: lightgray">Marketplace</a>
-        <a href="" style="color: lightgray">Explore</a>
-    </nav>
+        <ul class="top-list">
+            <img src="img/Screen%20Shot%202019-03-19%20at%2010.47.30%20AM.png" alt="Github logo" width="75px" height="70px">
+            <li><a class="top-list" href="">Pull requests</a></li>
+            <li><a class="top-list" href="">Issues</a></li>
+            <li><a class="top-list" href="">Marketplace</a></li>
+            <li><a class="top-list" href="">Explore</a></li>
+        </ul>
     </header>
 <main>
-    <img src="img/codeup-logo.png" alt="Codeup logo" height="50" width="50"><strong>Codeup</strong>
+    <h2><a class="codeup"><img src="img/codeup-logo.png" alt="Codeup logo" height="50px" width="50px">Codeup</a></h2>
     <div>
-       <br><nav>
-            <a href="" style="color: gray">Repositories</a>
-            <a href="" style="color: Black"><strong>People</strong></a>
-            <a href="" style="color: gray">Teams</a>
-            <a href="" style="color: gray">Projects</a>
-            <a href="" style="color: gray">Settings</a>
-       </nav>
+        <ul class="middle-list">
+            <li><a class="middle-list" href="">Repositories</a></li>
+            <li><a class="middle-list" href="">People</a></li>
+            <li><a class="middle-list" href="">Teams</a></li>
+            <li><a class="middle-list" href="">Projects</a></li>
+            <li><a class="middle-list" href="">Settings</a></li>
+        </ul>
     </div>
 </main>
     <article>
         <main>
-            <h4>Codeup's dev team</h4>
+            <h4><a class="codeup-dev">Codeup's dev team</a></h4>
         </main>
-        <br><div>
-            <img src="img/avatar1.png" alt="Profile picture" width="60" height="60">
+        <br><div class="avatar-body">
+            <img src="img/avatar1.png" alt="Profile picture" width="60px" height="60px">
             <a href="" style="color: blue">Kent Beck</a>
-                <table>
-                    <tr>
-                        <td><small>KentBeck</small></td>
-                        <td><small>Member</small></td>
-                        <td><small>1 team</small></td>
-                    </tr>
-                </table>
+            <ul class="main-body">
+                <li><a class="main-body">KentBeck</a></li>
+                <li><a class="main-body">Member</a></li>
+                <li><a class="main-body">1 team</a></li>
+        </ul>
             </div>
-            <div>
+            <br><div class="avatar-body">
                 <img src="img/codeup-logo.png" alt="Profile picture" width="60" height="60">
-                <a href="" style="color: blue">Codeup Instruction Staff</a>
-                    <table>
-                        <tr>
-                            <td><small>CodeupInstructors</small></td>
-                            <td><small>Member</small></td>
-                            <td><small>1 team</small></td>
-                        </tr>
-                    </table>
+            <a href="" style="color: blue">Codeup Instruction Staff</a>
+             <ul class="main-body">
+                 <li><a class="main-body">CodeupInstructors</a></li>
+                <li><a class="main-body">Member</a></li>
+                <li><a class="main-body">1 team</a></li>
+        </ul>
             </div>
-            <div>
+            <br><div class="avatar-body">
                 <img src="img/avatar2.png" alt="Profile picture" width="60" height="60">
                 <a href="" style="color: blue">Martin Fowler</a>
-                    <table>
-                        <tr>
-                            <td><small>Member</small></td>
-                            <td><small>0 teams</small></td>
-                        </tr>
-                    </table>
+                    <ul class="main-body">
+                        <li><a class="main-body">Member</a></li>
+                        <li><a class="main-body">0 teams</a></li>
+                    </ul>
             </div>
     </article>
     <br><hr>
-<footer>
-    &#x24B8; 2018 GitHub, Inc.
-    <nav>
-        <a href="" style="color: blue">Terms</a>
-        <a href="" style="color: blue">Privacy</a>
-        <a href="" style="color: blue">Security</a>
-        <a href="" style="color: blue">Help</a>
-    </nav>
+<br><footer>
+    <ul class="bottom-list" style="float: left">
+        <li><a class="copyright">&#x24B8; 2018 GitHub, Inc.</a></li>
+        <li><a class="bottom-list" href="">Terms</a></li>
+        <li><a class="bottom-list" href="">Privacy</a></li>
+        <li><a class="bottom-list" href="">Security</a></li>
+        <li><a class="bottom-list" href="">Status</a></li>
+        <li><a class="bottom-list" href="">Help</a></li>
+    </ul>
     <nav>
         <a href="" style="color: blue">Contact Github</a>
         <a href="" style="color: blue">API</a>
