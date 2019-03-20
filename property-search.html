@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Search</title>
+</head>
+    <body>
+        <h2>Property Search</h2>
+        <form method="GET" action="http://request-inspector.glitch.me/">
+            <label for="lot_preference">Property Type: </label>
+            <select name="lot_preference" id="lot_preference" required>
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="vacant lot">Vacant Lot</option>
+            </select>
+            <br>
+            <label for="square footage">Square Footage:</label>
+            <input type="number" name="square footage" id="square footage" required><br>
+
+            <label for="min_price">Minimum Price:</label>
+            <input type="number" name="min_price" id="min_price" placeholder="$10,000" required><br>
+
+            <label for="max_price">Maximum Price:</label>
+            <input type="number" name="max_price" id="max_price" placeholder="$100,000" required><br>
+
+            <label for="zipcode">Zipcode:</label>
+            <input type="text" name="zipcode" id="zipcode" required><br>
+
+            <label>Bedrooms: </label>
+            1<input type="radio" name="bedrooms" value="1">
+            2<input type="radio" name="bedrooms" value="2">
+            3<input type="radio" name="bedrooms" value="3">
+            4<input type="radio" name="bedrooms" value="4"><br>
+
+            <label>Bathrooms: </label>
+            1<input type="radio" name="bathrooms" value="1">
+            2<input type="radio" name="bathrooms" value="2">
+            3<input type="radio" name="bathrooms" value="3"><br>
+
+            <button type="submit">Search Now</button>
+        </form>
+    </body>
+</html>
