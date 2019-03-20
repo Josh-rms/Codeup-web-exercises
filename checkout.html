@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <style>
+        .whats_this {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+    <body>
+        <h3>Payment Methods</h3>
+        <div>We Accept:</div>
+        <img src="img/1_EVDB2Zeog45OZaaFJY17QQ.jpeg" width="300px" height="70px" alt="VISA, MasterCard, Discover, American Express">
+        <form method="POST" action="http://request-inspector.glitch.me/">
+
+            <label for="holder name">Name on Card:</label>
+            <input type="text" name="cardholders name" id="holder name" required><br>
+
+            <label for="card number">Card Number:</label>
+            <input type="text" name="card number" id="card number" placeholder="xxxx-xxxx-xxxx-xxxx" required><br>
+
+
+            <label for="expiry month">Expiry Date:</label>
+            <select name="expiry month" id="expiry month" required>
+                <option name="expiry month" value="January">January-(01)</option>
+                <option name="expiry month" value="February">February-(02)</option>
+                <option name="expiry month" value="March">March-(03)</option>
+                <option name="expiry month" value="April">April-(04)</option>
+                <option name="expiry month" value="May">May-(05)</option>
+                <option name="expiry month" value="June">June-(06)</option>
+                <option name="expiry month" value="July">July-(07)</option>
+                <option name="expiry month" value="August">August-(08)</option>
+                <option name="expiry month" value="September">September-(09)</option>
+                <option name="expiry month" value="October">October-(10)</option>
+                <option name="expiry month" value="November">November-(11)</option>
+                <option name="expiry month" value="December">December-(12)</option>
+            </select>
+            <label for="expiry year"></label>
+            <select name="expiry year" id="expiry year" required>
+                <option name="expiry year" value="2019">2019</option>
+                <option name="expiry year" value="2020">2020</option>
+                <option name="expiry year" value="2021">2021</option>
+                <option name="expiry year" value="2022">2022</option>
+                <option name="expiry year" value="2023">2023</option>
+                <option name="expiry year" value="2024">2024</option>
+                <option name="expiry year" value="2025">2025</option>
+                <option name="expiry year" value="2026">2026</option>
+                <option name="expiry year" value="2027">2027</option>
+                <option name="expiry year" value="2028">2028</option>
+            </select>
+            <br>
+
+            <label for="security code">Security Code:</label>
+            <input type="password" name="security code" id="security code" minlength="3" maxlength="4" placeholder="xxxx" required> <a class="whats_this" href="https://www.cvvnumber.com/cvv.html">What's this?</a>
+            <br>
+
+            <input type="checkbox" name="savecard" value="true" checked> Keep this credit card on file for future transactions<br>
+
+            <h3>Billing Information</h3>
+            <label for="full_name">Full name:*</label>
+            <input type="text" name="full_name" id="full_name" required>
+            <p>
+            <label for="address1">Address line 1:*</label>
+            <input type="text" name="address1" id="address1" required>
+            </p>
+            <p>
+                <label for="address2">Address line 2:</label>
+                <input type="text" name="address2" id="address2">
+            </p>
+            <p>
+                <label for="city">City:*</label>
+                <input type="text" name="city" id="city" required>
+            </p>
+            <p>
+                <label for="state">State:*</label>
+                <select name="state" id="state" required>
+                    <option name="state" value="Texas">Texas</option>
+                </select>
+            </p>
+            <p>
+                <label for="zipcode">Zipcode:*</label>
+                <input type="text" name="zipcode" id="zipcode" maxlength="5" required>
+            </p>
+            <p>
+                <label for="country">Country:*</label>
+                <select name="country" id="country">
+                    <option name="country" value="united utates">United States</option>
+                </select>
+            </p>
+            <button type="submit">Buy Now!</button>
+        </form>
+    </body>
+</html>
