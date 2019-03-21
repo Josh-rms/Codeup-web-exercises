@@ -1,4 +1,108 @@
-.fancy-header {
-    color: purple;
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:link {
+    color:blue;
+}
+
+a:hover {
+    color:red;
+}
+
+a:visited {
+    color:yellow;
+}
+
+a:active {
+    color:black
+}
+
+h2 {
+    color: firebrick;
     text-decoration: underline;
+    inline-size: fit-content;
+}
+
+h2:hover {
+    background-color: white;
+    width: 135px;
+}
+
+hr {
+    border-style: double;
+    width: available;
+    border-color: firebrick;
+}
+
+body {
+    background-color: gray;
+    background-image: url("../img/veridian.png");
+    background-repeat: no-repeat;
+    background-size: 207px, 100px;
+}
+
+.fancy-header {
+    color: firebrick;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.veridian {
+    margin: 0;
+    padding: 2px 0 8px 41px;
+    list-style: none;
+    background-image: url("../img/veridian2.jpg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size:20px;
+}
+
+.man-sunset {
+    width: 493px;
+    height: 330px;
+}
+
+.hr1 {
+    border-style: double;
+    width: 800px;
+    border-color: firebrick;
+}
+
+#our-product {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#our-product td, th {
+    border: 1px ;
+    color: black;
+    padding: 8px;
+}
+
+#our-product tr {
+    background-color: white;
+}
+#our-product tr:hover {
+    background-color: red;
+}
+
+#our-product th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: firebrick;
+    color: black;
+    font-size: large;
 }
