@@ -1,0 +1,10 @@
+/*Stylesheet for Intro to CSS*/
+/*h1 turns h1 level headings darkblue*/
+h1 {
+    color: darkblue;
+}
+
+/*removes bullet point from unordered lists*/
+li {
+    list-style: none;
+}
