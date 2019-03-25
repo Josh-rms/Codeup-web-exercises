@@ -56,49 +56,33 @@ a {
 }
 .profile-details {
     float: left;
-    width: 25%;
-    margin-right: .5em;
-    margin-left: .5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    margin: 0 .5em 0 .5em;
     width: calc(100% - 1015px);
 }
 .profile-items {
     list-style: none;
-    padding: 0em;
+    padding: 0;
 }
 .profile-entry {
     margin: .5em;
 }
 .timeline {
     float: left;
-    width: 50%;
-    margin-right: .5em;
-    margin-left: .5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    margin: 0 .5em 0 .5em;
     width: calc(100% - 590px);
 
 }
 .container {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-right: 0em;
-    padding-left:0em;
+    padding: 2em 0 2em 0;
 }
 .media-body {
-    width: 100%;
     float: right;
     width: calc(100% - 50px);
 
 }
 .who-to-follow {
     float: right;
-    width: 25%;
-    margin-right: .5em;
-    margin-left: .5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    margin: 0 .5em 0 .5em;
     width: calc(100% - 980px);
 
 }
