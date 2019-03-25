@@ -1,0 +1,102 @@
+* {
+    font-family: Poppins, sans-serif;
+}
+hr {
+    height: 7px;
+    color: red;
+    background-color: red;
+    border: none;
+    width: 45px;
+    border-radius: 20px;
+    position: relative;
+    top: -350px;
+    left: -281px;
+}
+li {
+    list-style: none;
+}
+.nav {
+    position: static;
+    left: -1em;
+}
+.side-nav {
+    height: 300%;
+    width:250px;
+    background-color: #e25141;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    top: 3.5em;
+    left: 0;
+}
+.interior {
+    font-weight: normal;
+    font-size: 60px;
+    position: absolute;
+    left: 321px;
+    top: 38px;
+}
+.small-title {
+    color: #e25141;
+    font-size: 30px;
+    font-weight: normal;
+    position: relative;
+    top: 145px;
+    left: 315px
+}
+.picture {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 653px;
+    margin: 5px;
+    margin-bottom: 1px;
+}
+.text {
+    position: relative;
+    top: 100px;
+    left: 318px;
+}
+.pic-align {
+    position: relative;
+    top: -830px;
+    left: -335px;
+}
+.company-name {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    font-weight: normal;
+}
+#showcase {
+    padding-bottom: 500px;
+}
+#showcase-line {
+    margin-bottom: 500px;
+}
+#services {
+    padding-top: 100px;
+}
+#kitchen {
+    width: 400px;
+    height: 350px;
+}
+#atrium {
+    width: 400px;
+    height: 350px;
+}
+#livingroom {
+    width: 400px;
+    height: 187px;
+}
+#bedroom {
+    width: 400px;
+    height: 187px;
+}
+#diningroom {
+    width: 400px;
+    height: 187px;
+}
+#livingroom-2 {
+    width: 400px;
+    height: 187px;
+}
