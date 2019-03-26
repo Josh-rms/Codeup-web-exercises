@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/media-queries.css">
     <title>Media Queries</title>
 </head>
 <body>
     <div class="alert-info hidden-on-desktop">
-        <a href="#main">Skip to main content</a>
+        <a href="#main" id="skip">Skip to main content</a>
     </div>
     <h1>Company</h1>
     <nav>
@@ -18,7 +20,7 @@
         </ul>
     </nav>
     <div class="header-img">
-        <img src="http://lorempixel.com/g/900/400" alt="">
+        <img src="img/image1.png" alt="" id="picture">
     </div>
     <section id="main" class="main">
         <h2>Main Section</h2>
@@ -29,9 +31,14 @@
         <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
     </section>
     <footer>
-        <p>(c) 2017 All rights reserved</p>
+        <p class="copyright">(c) 2017 All rights reserved</p>
         <div id="social-media-links">
+            <ul>
+                <li><a href="https://twitter.com/?lang=en"><img class="social-icons" src="img/twitter.png" alt=""></a></li>
+                <li><a href="https://facebook.com"><img class="social-icons" src="img/fb.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/?hl=en"><img class="social-icons" src="img/ig.png" alt=""></a></li>
 
+            </ul>
         </div>
     </footer>
 </body>
