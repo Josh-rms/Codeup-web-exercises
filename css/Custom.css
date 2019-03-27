@@ -1,0 +1,110 @@
+h1 {
+    text-align: center;
+    background-color: white;
+    opacity: .6;
+}
+h2 {
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+hr {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.jumbotron {
+    background-image: url("../img/pizza.png");
+}
+.form-control.mr-sm-2 {
+    width: 250px;
+    height: 31px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+    border: 1px solid lightgrey;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+.badge.badge-pill.badge-dark {
+    border-radius: 60px;
+    margin-right: 3px;
+}
+.card-header {
+    background-color: #007bff;
+}
+.small-header {
+    background-color: #f7f7f7;
+}
+.form-header {
+    color: white;
+    float: left;
+    margin: 0;
+}
+.next-step {
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: right;
+}
+.selection {
+    float: left;
+    color: black;
+}
+.card-text {
+    float: left;
+    padding-left: 20px;
+}
+.form-check-label {
+    float: left;
+}
+.card {
+    margin-top: 20px;
+}
+.drop-down {
+    width: 1150px;
+    position: relative;
+    left: 21px;
+    margin-bottom: 25px;
+    margin-left: 16px;
+}
+.top-space {
+    margin-top: 25px;
+}
+.display-4 {
+    width: 105.3%;
+    margin-left: -32px;
+}
+.btn-group {
+    float: right;
+}
+.btn-secondary {
+    border: none;
+}
+.border-radius {
+    border-radius: 5px;
+}
+#sign-up {
+    width: 20px;
+    height: 23px;
+    float: left;
+    margin-left: 420px;
+    padding-top: 2px;
+}
+#menu {
+    margin-right: 20px;
+}
+#cart {
+    width: 16px;
+    height: 15px;
+    margin-left: 5px;
+}
+#pizza-world {
+    color: #888889;
+}
+#order-online {
+    color: #888889;
+}
