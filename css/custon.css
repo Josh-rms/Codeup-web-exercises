@@ -1,0 +1,62 @@
+.jumbotron {
+    background-image: url("../img/pizza.png");
+}
+h1 {
+    text-align: center;
+    background-color: white;
+    opacity: .6;
+}
+.form-control.mr-sm-2 {
+    width: 250px;
+    height: 31px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#menu {
+    margin-right: 20px;
+}
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+    border: 1px solid lightgrey;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+#sign-up {
+    width: 20px;
+    height: 23px;
+    float: left;
+    margin-left: 420px;
+    padding-top: 2px;
+}
+.badge.badge-pill.badge-dark {
+    border-radius: 60px;
+    margin-right: 3px;
+}
+.card-header {
+    background-color: #007bff;
+}
+.small-header {
+    background-color: #f7f7f7;
+}
+#crust-size {
+    color: white;
+    float: left;
+    margin: 0;
+}
+.next-step {
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: right;
+}
+.selection {
+    float: left;
+    color: black;
+}
+.card-text {
+    float: left;
+    padding-left: 20px;
+}
