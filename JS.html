@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS problems</title>
+</head>
+<body>
+<script>
+    var littlemermaid = 3;
+    var brotherbear = 5;
+    var hercules = 1;
+
+    price = (littlemermaid + brotherbear + hercules) * 3;
+    console.log("The price for all 3 movies is " + "$" + price);
+
+</script>
+
+    <script>
+        var Google = 400;
+        var Amazon = 380;
+        var Facebook = 350;
+
+        var F = Facebook * 10;
+        var A = Amazon * 4;
+        var G = Google * 6;
+
+        var week = "This Weeks Paycheck = " + "$" + (G + A + F);
+        var breakdown = "Breakdown: " + "Google= "+ "$" + G + " Amazon= " + "$" + A + " Facebook= " + "$" + F;
+        console.log(week);
+        console.log(breakdown);
+    </script>
+    <script>
+        var offerStatus = true;
+        var numberOfItems = Number(prompt("How many did they buy?"));
+        console.log(numberOfItems);
+        var memberStatus= true;
+
+        if(memberStatus && offerStatus || (numberOfItems >2 && offerStatus)) {
+            console.log("You can use the offer!")
+        } else {
+            console.log("Sorry it's expired!")
+        }
+    </script>
+</body>
+</html>
