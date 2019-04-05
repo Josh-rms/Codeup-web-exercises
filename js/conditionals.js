@@ -152,15 +152,15 @@ alert(userInput);
  * return value.
  */
 
-function calculateTotal(a,b) {
-    switch(a) {
-        case 0 : return 0;
-        case 1 : return +b - (.1 * +b);
-        case 2 : return +b - (.25 * +b);
-        case 3 : return +b - (.35 * +b);
-        case 4 : return +b - (.5 * +b);
+function calculateTotal(luckyNumber,totalBill) {
+    switch(luckyNumber) {
+        case 0 : return +totalBill;
+        case 1 : return +totalBill - (.1 * +totalBill);
+        case 2 : return +totalBill - (.25 * +totalBill);
+        case 3 : return +totalBill - (.35 * +totalBill);
+        case 4 : return +totalBill - (.5 * +totalBill);
         case 5 : return 0;
-        default : return +b
+        default : return +totalBill
     }
 }
 
