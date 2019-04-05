@@ -19,19 +19,19 @@
 
 var con = confirm("Would you like to enter a number?");
 if(con === true) {
-    var num = prompt("Alright enter a number.");
+    var num = parseInt(prompt("Alright enter a number."));
     if (isNaN(num)) {
         alert("What you entered is not a number.");
     } else {
-        if (+num % 2 === 0) {
+        if (num % 2 === 0) {
             alert("This number is even!");
         } else {
             alert("This number is odd!")
         }
-        var plus = (+num + 100);
+        var plus = (num + 100);
         alert(num + " + 100= " + plus);
 
-        if (+num >= 0) {
+        if (num >= 0) {
             alert("This number is positive!");
         } else {
             alert("This number is negative!");
