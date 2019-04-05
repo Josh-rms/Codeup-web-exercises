@@ -71,23 +71,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 function analyzeColor(color) {
     if (color === "red") {
         return ("Strawberries are red.")
-    }
-    if (color === "orange") {
+    }else if (color === "orange") {
         return ("The orange is orange")
-    }
-    if (color === "yellow"){
+    } else if (color === "yellow"){
         return ("The banana is yellow")
-    }
-    if (color === "green") {
+    } else if (color === "green") {
         return ("The grass is green")
-    }
-    if (color === "blue"){
+    } else if (color === "blue"){
         return ("The sky is blue")
-    }
-    if (color === "indigo") {
+    } else if (color === "indigo") {
         return ("Indigo is indigo, I don't really know anything that's that color")
-    }
-    if (color === "violet"){
+    } else if (color === "violet"){
         return ("Violet is violet, I don't know anything about this color either")
     }
 }
