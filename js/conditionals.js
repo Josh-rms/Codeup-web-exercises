@@ -21,20 +21,21 @@ var con = confirm("Would you like to enter a number?");
 if(con === true) {
     var num = prompt("Alright enter a number.");
     if (isNaN(num)) {
-        alert("You did not enter a number.");
-    }
-    if (+num % 2 === 0) {
-        alert("This number is even!");
+        alert("What you entered is not a number.");
     } else {
-        alert("This number is odd!")
-    }
-    var plus = (+num + 100);
+        if (+num % 2 === 0) {
+            alert("This number is even!");
+        } else {
+            alert("This number is odd!")
+        }
+        var plus = (+num + 100);
         alert(num + " + 100= " + plus);
 
-    if (+num < 0) {
-        alert("This number is negative!");
-    } else {
-        alert("This number is positive!");
+        if (+num >= 0) {
+            alert("This number is positive!");
+        } else {
+            alert("This number is negative!");
+        }
     }
 }
 
