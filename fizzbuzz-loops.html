@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+</head>
+<body>
+<script>
+
+//    var i =1;
+//
+//    while (i <= 10) {
+//        i++;
+//
+//        if (i === 7) {
+//            console.log("Stop counting");
+//            break;
+//
+//            console.log("Keep Counting");
+//        }
+//
+//    }
+
+
+//  My way of writing Fizzbuzz
+
+   for (var i = 1; i <= 100; i++) {
+       if (i % 3 === 0) {
+           console.log(i + " Fizz")
+       } else if (i % 5 === 0){
+           console.log (i +" Buzz")
+       } else if (i % 5 % 3 === 0) {
+           console.log( i + " FizzBuzz")
+       } else console.log(i);
+   }
+
+
+//   Better way to write FizzBuzz
+
+// for(var i = 1; i < 101; i++){
+//     if(i % 15 == 0) console.log("FizzBuzz");
+//     else if(i % 5 == 0) console.log("Buzz");
+//     else if(i % 3 == 0) console.log("Fizz");
+//     else console.log(i);
+// }
+
+
+<!--    -->
+//    for (var i = 1; i <= 10; i++){
+//        console.log(i)
+//    }
+
+
+
+    // var i = 2;
+    //
+    // while (i <= 100) {
+    //     if (i % 2 === 0) {
+    //         console.log(i);
+    //     }
+    //     i++ ;
+    // }
+    //
+    // function squareOFNumber (a) {
+    //     return a * a;
+    // }
+    // while (i < 11) {
+    //     console.log(squareOFNumber(i));
+    //     i++;
+    // }
+
+    // var i = 1;
+    //
+    // do {
+    //     console.log("The number is: " + i)
+    // } while (i <= 25);
+    //
+    // var x =100;
+    // do {
+    //     console.log(x);
+    //     x -= 10;
+    // } while (x >= -50);
+
+</script>
+</body>
+</html>
