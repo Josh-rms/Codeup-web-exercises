@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    h1 {
+        text-align: center;
+    }
+    #map {
+        width: 1200px;
+        height: 80vh;
+        margin: 0 auto;
+    }
+</style>
+<body>
+<h1>Mapbox API</h1>
+<div id="map">
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<script src= js/keys.js rel='stylesheet'></script>
+</div>
+
+<script>
+    mapboxgl.accessToken = mapboxKey;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9'
+    });
+</script>
+
+</body>
+</html>
