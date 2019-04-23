@@ -17,11 +17,26 @@
 </body>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    $("li").css("font-size", "20px");
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color
+    }
+    $("h1").click(function () {
+        $(this).css("background-color", getRandomColor());
+    });
 
-    var contents = $("h1").html();
-    alert(contents);
+    $("p").dblclick(function () {
+        $(this).css("font-size", "18px");
+    });
 
-    $("h1, li, p").css("background-color", "yellow");
+    $("li").hover(function () {
+        $(this).css("color", "red");
+    }, function () {
+        $(this).css("color", "black");
+    });
 </script>
 </html>
