@@ -5,12 +5,19 @@
     <title>First jQuery Exercise</title>
 </head>
 <body>
-
+<h1 id="awesome-header">Id Selector jQuery exercise</h1>
+<p class="text">This is the paragraph element for the jQuery exercise</p>
+<ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<div class="text">This is the div element for the jQuery exercise</div>
 </body>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    $(document).ready(function() {
-    alert( 'The DOM has finished loading!' );
-});
+    var contents = $("#awesome-header").html();
+    alert(contents);
 </script>
 </html>
