@@ -5,19 +5,21 @@
     <title>First jQuery Exercise</title>
 </head>
 <body>
-<h1 id="awesome-header">Id Selector jQuery exercise</h1>
-<p class="text">This is the paragraph element for the jQuery exercise</p>
-<ul id="list">
+<h1 id="codeup">Class Selector jQuery exercise</h1>
+<p class="codeup">This is the paragraph element for the jQuery exercise</p>
+<ul>
     <li>1</li>
     <li>2</li>
     <li>3</li>
     <li>4</li>
 </ul>
-<div class="text">This is the div element for the jQuery exercise</div>
+<div class="codeup">This is the div element for the jQuery exercise</div>
 </body>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    var contents = $("#awesome-header").html();
-    alert(contents);
+    $(".codeup")
+        .css("border-color", "red")
+        .css("border-style", "solid")
+        .css("border-width", "1px");
 </script>
 </html>
