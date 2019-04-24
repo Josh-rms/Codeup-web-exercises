@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1 style="text-align: center">Konami Code</h1>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    var konamiCode = ["ArrowUp",
+                      "ArrowUp",
+                      "ArrowDown",
+                      "ArrowDown",
+                      "ArrowLeft",
+                      "ArrowRight",
+                      "ArrowLeft",
+                      "ArrowRight",
+                      "b",
+                      "a",
+                      "Enter"
+                    ];
+
+    var konamiArray= [];
+
+
+    function arrays(a, b,) {
+        if(a.length !== b.length)
+            return false;
+        for(var i = a.length; i--;) {
+            if(a[i] !== b[i])
+                return false;
+        }
+        return true;
+    }
+
+    function vid() {
+        window.open("https://www.youtube.com/embed/Y7jDbscrEls?autoplay=1");
+    }
+
+    $(document).keyup(function(event){
+        konamiArray.push(event.key);
+        if (konamiArray.length > 11){
+            konamiArray.shift();
+        } if (arrays(konamiArray,konamiCode)){
+            alert("You have added 30 lives!");
+                vid();
+        }
+    });
+
+</script>
+</body>
+</html>
+
