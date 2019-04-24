@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+</head>
+<style>
+    .invisible {
+        visibility: hidden;
+    }
+    dt {
+        text-decoration: underline;
+    }
+</style>
+<body>
+<h1 style="text-align: center">Facts about National Parks!</h1>
+<dl>
+    <dt>Yosemite National Park:</dt>
+    <dd class="invisible">How do I get to Yosemite?</dd>
+    <dd class="invisible">What is there to do in Yosemite?</dd>
+    <dt>Zion National Park:</dt>
+    <dd class="invisible">Can I drive my private vehicle into Zion Canyon?</dd>
+    <dd class="invisible">Can commercial buses enter Zion Canyon?</dd>
+    <dt>Joshua Tree National Park:</dt>
+    <dd class="invisible">Do I need to make campground reservations?</dd>
+    <dd class="invisible">How did the Joshua tree get its name?</dd>
+    <dt>Olympic National Park:</dt>
+    <dd class="invisible">How do I get to Olympic National Park?</dd>
+    <dd class="invisible">What is there to see and do in Olympic National Park?</dd>
+    <dt>Glacier National Park:</dt>
+    <dd class="invisible">Where is Glacier National Park located?</dd>
+    <dd class="invisible">What does it cost to enter the park?</dd>
+</dl>
+<button type="button">Click for park info!</button>
+</body>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+    $("button").click(function () {
+       $("dd").toggleClass("invisible");
+    });
+
+    $("dt").click(function() {
+        $(this).css("background-color", "yellow");
+    });
+</script>
+</html>
