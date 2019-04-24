@@ -20,8 +20,12 @@
     .parentUl {
         color: blue;
     }
+    li {
+        display: none;
+    }
 </style>
 <body>
+<div><span id="close">x</span><h1 id="newsletter">"Would you like to sign up for our newsletter?</h1></div>
 <h1 style="text-align: center">10 questions about National Parks!</h1>
 <dl>
     <dt>Yosemite National Park:</dt>
@@ -41,7 +45,7 @@
     <dd class="invisible">What does it cost to enter the park?</dd>
 </dl>
 <button type="button" id="parkInfo">Click for park info!</button>
-    <h3>Yosemite National Park</h3>
+    <h3 class="toggle">Yosemite National Park</h3>
     <ul>
         <li>Yosemite might be our nation’s 3rd national park, but it sparked the idea of national parks.</li>
         <li>Yosemite’s granite rock formations glow like fire at sunset.</li>
@@ -49,7 +53,7 @@
         <li>Yosemite is home to one of the tallest waterfalls in the world.</li>
         <li>Yosemite is the only national park to bid to host the winter Olympics.</li>
     </ul>
-    <h3>Zion National Park</h3>
+    <h3 class="toggle">Zion National Park</h3>
     <ul>
         <li>Before it was a national park, Zion was a national monument, and it’s name wasn’t Zion.</li>
         <li>Zion is home to one of the greatest engineering feats of modern times.</li>
@@ -57,7 +61,7 @@
         <li>Zion’s Angels Landing provides spectacular views, but it’s one of the world’s most dangerous.</li>
         <li>Zion Canyon is continually changing.</li>
     </ul>
-    <h3>Olympic National Park</h3>
+    <h3 class="toggle">Olympic National Park</h3>
     <ul>
         <li>Olympic’s Hoh Rain Forest receives over 12 feet of rain a year.</li>
         <li>Breaching whales make a big splash for park goers.</li>
@@ -93,5 +97,17 @@
             $(this).children().eq(0).toggleClass("parentUl")
         });
     });
+
+    $("#close").click(function () {
+        $("#newsletter, #close").hide();
+    });
+
+    $(".toggle").click(function () {
+        $("li").slideToggle();
+    });
+
+       setTimeout(function () {
+          confirm("Would you like to register to this site?");
+       }, 8000);
 </script>
 </html>
