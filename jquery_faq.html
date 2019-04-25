@@ -23,10 +23,14 @@
     li {
         display: none;
     }
+    h2 {
+        display: none;
+    }
 </style>
 <body>
 <div><span id="close">x</span><h1 id="newsletter">"Would you like to sign up for our newsletter?</h1></div>
 <h1 style="text-align: center">10 questions about National Parks!</h1>
+<h2>Would you like to register to this site?</h2>
 <dl>
     <dt>Yosemite National Park:</dt>
     <dd class="invisible">How do I get to Yosemite?</dd>
@@ -103,8 +107,6 @@
         $("li").slideToggle();
     });
 
-       setTimeout(function () {
-          confirm("Would you like to register to this site?");
-       }, 8000);
+        $("h2").delay(8000).fadeIn(4000);
 </script>
 </html>
