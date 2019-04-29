@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+</head>
+<link rel="stylesheet" href="css/store-bootstrap.css">
+
+<body>
+    <div id="posts"></div>
+</body>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    function blogPosts (data, i) {
+        var html = "";
+        for (i = 0; i < data.length; i++) {
+            html += "<div>" + data[i].title + "</div>";
+            html += "<div>" + data[i].content + "</div>";
+            html += "<div>" + data[i].categories + "</div>";
+            html += "<div>" + data[i].date + "</div>";
+            html +=  "<br>"
+        }
+        return html
+    }
+
+
+    $.ajax("data/blog.json", {
+        "type" : "POST"
+    }).done(function (data) {
+        $("#posts").append(blogPosts(data));
+        console.log(data)
+    })
+</script>
+</html>
