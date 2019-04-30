@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jokes & Quotes</title>
+</head>
+<link rel="stylesheet" href="css/cerulean-bootstrap.css">
+<body>
+<button type="button" style="float: left" id="buttonLeft">Press Me!</button>
+<button type="button" style="float: right" id="buttonRight">No, Press Me!</button>
+</body>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+    $("#buttonRight").click(function() {
+    $.ajax("http://api.icndb.com/jokes/random").done(function (data) {
+        alert(data.value.joke);
+        console.log(data);
+    });
+    });
+
+    $("#buttonLeft").click(function () {
+        $.ajax("http://quotes.stormconsultancy.co.uk/random.json").done(function (data) {
+            console.log(data);
+            alert(data.quote);
+        })
+    })
+
+</script>
+</html>
