@@ -54,11 +54,9 @@ let names = [];
 
 // TODO: rewrite the following using arrow functions
 //  "DONE!"
-const userEmail= user => emails.push(user.email);
-const userName = user => names.push(user.name);
 
-users.forEach(userEmail);
-users.forEach(userName);
+users.forEach(user => emails.push(user.email));
+users.forEach(user => names.push(user.name));
 
 // TODO: replace `var` with `let` in the following declaration
 //  "DONE!"
@@ -86,5 +84,6 @@ for (let developer of developers) {
 
   // TODO: rewrite the assignment below to use template strings
   //  "DONE!"
-list = (`<li>${developer}</li></ul>`);
+list += (`<li>${developer}</li>`);
 }
+list += "</ul>";
