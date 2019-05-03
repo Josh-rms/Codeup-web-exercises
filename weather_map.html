@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="css/weather_map_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<h1>Weather Application</h1>
+<h2>San Antonio</h2>
+
+<div class="box" id="today"></div>
+
+<div class="box" id="tomorrow"></div>
+
+<div class="box" id="3day"></div>
+
+<div id='map'></div>
+    Latitude:  <input type="text" name="Latitude">
+    Longitude: <input type="text">
+<button type="button">Submit</button>
+</body>
+<script src="js/jquery-2.2.4.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src=js/keys.js></script>
+<script>
+
+    var corsUrl = "https://cors-anywhere.herokuapp.com/";
+    var darkSkyUrl = "https://api.darksky.net/forecast/";
+    var darkSkyApi = darkSkyKey;
+
+    var lat = 29.4241;
+    var lng = -98.4936;
+
+    //Create an array of objects for the Icons.
+    var Icons = [
+        {
+            "type": "clear-day",
+            "icon": 'icon/SVG/Sun.svg'
+        },{
+            "type": "clear-night",
+            "icon": 'icon/SVG/Moon.svg'
+        },{
+            "type": "rain",
+            "icon": 'icon/SVG/Cloud-Rain.svg'
+        },{
+            "type": "snow",
+            "icon": 'icon/SVG/Cloud-Snow.svg'
+        },{
+            "type": "sleet",
+            "icon": 'icon/SVG/Cloud-Hail-Alt.svg'
+        },{
+            "type": "wind",
+            "icon": 'icon/SVG/Wind.svg'
+        },{
+            "type": "fog",
+            "icon": 'icon/SVG/Cloud-Fog.svg'
+        },{
+            "type": "cloudy",
+            "icon": 'icon/SVG/Cloud.svg'
+        },{
+            "type": "partly-cloudy-day",
+            "icon": 'icon/SVG/Cloud-Sun.svg'
+        },{
+            "type": "partly-cloudy-night",
+            "icon": 'icon/SVG/Cloud-Moon.svg'
+        }
+    ];
+
+    //Function to choose the icon based on type of weather.
+    function getIcon(weatherType){
+        var weatherIcon = "";
+        Icons.forEach(function (type, i) {
+            if(Icons[i].type === weatherType) {
+                weatherIcon = Icons[i].icon;
+            }
+        });
+        return weatherIcon;
+    }
+
+    var weatherObject= {};
+
+    //Function to get the weather data based on the Dark Sky API objectParameters.
+    function getWeatherData(num) {
+        var day = num;
+        var icon = weatherObject.daily.data[day].icon;
+        var highTemp = parseInt(weatherObject.daily.data[day].apparentTemperatureHigh);
+        var lowTemp = parseInt(weatherObject.daily.data[day].apparentTemperatureLow);
+        var clouds = weatherObject.daily.data[day].summary;
+        var wind = weatherObject.daily.data[day].windSpeed;
+        var humidity = weatherObject.daily.data[day].humidity;
+        var pressure = weatherObject.daily.data[day].pressure;
+        var seconds = weatherObject.daily.data[day].time;
+        weatherObject.data = [
+            icon,
+            highTemp,
+            lowTemp,
+            clouds,
+            wind,
+            humidity,
+            pressure
+        ];
+        return weatherObject
+    }
+
+    //Function to get the weather data and store it as HTML to be input based on the function.
+    function info() {
+        var html = "";
+            html += "<h1>" + weatherObject.data[1] + "°/" + weatherObject.data[2] + "°" + "</h1>";
+            html += "<img src=" + getIcon(weatherObject.data[0]) + ">";
+            html += "<h3>" + weatherObject.data[3] + "</h3>";
+            html += "<h3>Humidity: " + weatherObject.data[4] + "%" +"</h3>";
+            html += "<h3>Wind: " + weatherObject.data[5] + "</h3>";
+            html += "<h3>Pressure: " + weatherObject.data[6] + "</h3>";
+       return html
+    }
+
+    function today() {
+        getWeatherData(0);
+        $("#today").html("<div>" + "Today" + "</div>" + info());
+    }
+
+    function tomorrow() {
+        getWeatherData(1);
+        $("#tomorrow").html("<div>" + "Tomorrow" + "</div>" + info());
+    }
+
+    function thirdDay () {
+        getWeatherData(2);
+        $("#3day").html("<div>" + "3-Day" + "</div>" +info());
+    }
+
+  $.ajax(corsUrl + darkSkyUrl + darkSkyApi + "/" + lat + "," + lng).done(function (data) {
+    weatherObject = data;
+    console.log(weatherObject);
+    today();
+    tomorrow();
+    thirdDay ();
+    var dateObject = new Date(data.currently.time * 1000);
+    console.log(dateObject.toString());
+    });
+
+
+    mapboxgl.accessToken = mapboxKey;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4936, 29.4241]
+    });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.4936, 29.4241])
+        .addTo(map);
+
+
+</script>
+</html>
