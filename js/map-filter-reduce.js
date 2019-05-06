@@ -43,10 +43,9 @@ let userEmail = users.map(users => users.email);
 console.log(userEmail);
 
 let numOfYears = users.reduce((accumulation, person) => {
-    let yearAverage = accumulation + person.yearsOfExperience;
-    return yearAverage/users.length;
+    return accumulation + person.yearsOfExperience;
 }, 0);
-console.log(numOfYears);
+console.log(numOfYears/users.length);
 
 let longestEmail = users.reduce((accumulation, person) => {
     if (person.email.length > accumulation.length) {
@@ -57,7 +56,10 @@ let longestEmail = users.reduce((accumulation, person) => {
 console.log(longestEmail);
 
 let singleStringNames = users.reduce((accumulation, person) => {
-    let instructorNames = accumulation + person.name + ", ";
-    return instructorNames;
+    if (person.id === users.length) {
+        return accumulation + person.name + ".";
+    } else {
+        return accumulation + person.name + ", ";
+    }
 }, "Your instructors are: ");
 console.log(singleStringNames);
